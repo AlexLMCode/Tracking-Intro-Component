@@ -1,3 +1,4 @@
+/*Defining the elements*/
 const menu = document.getElementById('menu');
 const menuBtn = document.getElementById('menuBtn');
 

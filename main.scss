@@ -1,3 +1,4 @@
+@import "breakpoints";
 $primary:hsl(0, 100%, 68%);
 $dark-grayish-blue: hsl(230, 11%, 40%);
 $grayishBlue: hsl(231, 7%, 65%);
@@ -36,7 +37,6 @@ li{
   height: 5rem;
   position: relative;
   z-index: 2;
-  //overflow: hidden;
 
   &__logo{
     width: 24px;
@@ -47,6 +47,9 @@ li{
     cursor: pointer;
     position: relative;
     z-index: 2;
+    @include media(desktop-m){
+      display: none;
+    }
   }
   &::after {
     content: "";
@@ -58,6 +61,42 @@ li{
     background-color: $lightGrayishBlue;
     border-bottom-left-radius: 2rem;
     right: -12%;
+  }
+
+  &__list {
+    display: none;
+
+    @include media(desktop-m){
+      display: block;
+      position: relative;
+      z-index: 3;
+      width: 40%;
+      ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li{
+          text-transform: uppercase;
+          font-family: $secondary-font;
+          font-weight: 700;
+          &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+        .login {
+          color: $grayishBlue;
+        }
+        .dot {
+          color: $grayishBlue;
+          &:hover{
+            cursor: initial;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
   }
 }
 
@@ -78,6 +117,10 @@ li{
   align-items: center;
   justify-content: space-evenly;
   transition: 1s ease-in-out;
+
+  @include media(desktop-m){
+    display: none;
+  }
 
   &__list {
     display: flex;
@@ -206,10 +249,51 @@ li{
     text-transform: uppercase;
     width: 8rem;
     height: 2rem;
+    cursor: pointer;
   }
 }
 
+@include media(desktop-m){
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "data image";
+    margin: auto;
+    margin-top: 3rem;
+    height: 465px;
+    width: 90%;
+    margin-bottom: 6rem;
 
+    .decorative-image {
+      grid-area: image;
+      overflow: visible;
+    }
+
+    .main__container {
+      grid-area: data;
+      width: inherit;
+      height: 85%;
+      margin: inherit;
+
+      .p2__container {
+        font-size: 43px;
+      }
+      .main__buttons {
+        justify-content: start;
+      }
+    }
+
+    .decorative-image img {
+      position: absolute;
+      width: 153%;
+      height: 25rem;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
 
 .attribution {
   font-size: 11px;

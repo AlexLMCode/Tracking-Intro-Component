@@ -1,0 +1,221 @@
+$primary:hsl(0, 100%, 68%);
+$dark-grayish-blue: hsl(230, 11%, 40%);
+$grayishBlue: hsl(231, 7%, 65%);
+$lightGrayishBlue:hsl(207, 33%, 95%);
+$secondary-font: 'Barlow Condensed', sans-serif;
+$mainFont: 'Barlow', sans-serif;;
+
+:root {
+  font-size: 18px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $mainFont;
+  overflow: hidden;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+li{
+  list-style: none;
+}
+.navigation {
+  display: flex;
+  //width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  position: relative;
+  z-index: 2;
+  //overflow: hidden;
+
+  &__logo{
+    width: 24px;
+    cursor: pointer;
+  }
+
+  &__button{
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    width: 65%;
+    height: 34rem;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background-color: $lightGrayishBlue;
+    border-bottom-left-radius: 2rem;
+    right: -12%;
+  }
+}
+
+.navigation__menu {
+  position: absolute;
+  width: 80%;
+  height: 13rem;
+  z-index: 3;
+  top: 5rem;
+  right: 0;
+  bottom: 0;
+  left: 2rem;
+  background-color: white;
+  box-shadow: 0 0 12px 1px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 1s ease-in-out;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 6rem;
+    color: black;
+    font-family: $secondary-font;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    li:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .login {
+    text-transform: uppercase;
+    color: $grayishBlue;
+    font-family: $secondary-font;
+    font-weight: 700;
+    width: 80%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $grayishBlue;
+
+    a:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.decorative-image {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  img {
+    width: 30rem;
+    height: 13rem;
+  }
+}
+
+
+.main__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  .p1__container{
+    display: flex;
+    color: $grayishBlue;
+    font-family: $secondary-font;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    .pill {
+      margin-right: 10px;
+      color: white;
+      display: inline-block;
+      background-color: black;
+      border-radius: 1rem;
+      font-weight: 700;
+      height: 25px;
+      width: 50px;
+      text-align: end;
+    }
+  }
+
+  .p2__container {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $secondary-font;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .p3__container {
+    color: $dark-grayish-blue;
+    margin-bottom: 1rem;
+  }
+}
+
+.main__buttons{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .colored-button {
+    background-color: #ff5c5c;
+    color: white;
+    text-transform: uppercase;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: $secondary-font;
+    letter-spacing: 2px;
+  }
+
+  .colored-button:hover {
+    background-color: #ff9d9d;
+  }
+
+  .normal-button {
+    background-color: transparent;
+    color: $grayishBlue;
+    font-family: $mainFont;
+    //font-weight: 700;
+    letter-spacing: 2px;
+    border: none;
+    text-transform: uppercase;
+    width: 8rem;
+    height: 2rem;
+  }
+}
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

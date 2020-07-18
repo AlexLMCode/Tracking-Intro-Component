@@ -1,0 +1,201 @@
+:root {
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+li {
+  list-style: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  position: relative;
+  z-index: 2;
+}
+.navigation__logo {
+  width: 24px;
+  cursor: pointer;
+}
+.navigation__button {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.navigation::after {
+  content: "";
+  width: 65%;
+  height: 34rem;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background-color: #eef3f6;
+  border-bottom-left-radius: 2rem;
+  right: -12%;
+}
+
+.navigation__menu {
+  position: absolute;
+  width: 80%;
+  height: 13rem;
+  z-index: 3;
+  top: 5rem;
+  right: 0;
+  bottom: 0;
+  left: 2rem;
+  background-color: white;
+  box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 1s ease-in-out;
+}
+.navigation__menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 6rem;
+  color: black;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.navigation__menu__list li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.navigation__menu .login {
+  text-transform: uppercase;
+  color: #a0a1ac;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  width: 80%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #a0a1ac;
+}
+.navigation__menu .login a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.decorative-image {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.decorative-image img {
+  width: 30rem;
+  height: 13rem;
+}
+
+.main__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.main__container .p1__container {
+  display: flex;
+  color: #a0a1ac;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.main__container .p1__container .pill {
+  margin-right: 10px;
+  color: white;
+  display: inline-block;
+  background-color: black;
+  border-radius: 1rem;
+  font-weight: 700;
+  height: 25px;
+  width: 50px;
+  text-align: end;
+}
+.main__container .p2__container {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+.main__container .p3__container {
+  color: #5b5f71;
+  margin-bottom: 1rem;
+}
+
+.main__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.main__buttons .colored-button {
+  background-color: #ff5c5c;
+  color: white;
+  text-transform: uppercase;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2px;
+}
+.main__buttons .colored-button:hover {
+  background-color: #ff9d9d;
+}
+.main__buttons .normal-button {
+  background-color: transparent;
+  color: #a0a1ac;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 2px;
+  border: none;
+  text-transform: uppercase;
+  width: 8rem;
+  height: 2rem;
+}
+
+.toggle {
+  display: flex;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=main.css.map */
